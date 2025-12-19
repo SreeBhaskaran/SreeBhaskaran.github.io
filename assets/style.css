@@ -74,7 +74,11 @@ h1{margin:0; font-size: 32px; letter-spacing:.2px}
 }
 
 main{padding: 26px 0 60px}
-.section{padding: 26px 0}
+.section{padding: 26px 0;/* Fix anchor links hidden under sticky header */
+section {
+  scroll-margin-top: 130px;
+}
+}
 .section h2{
   margin: 0 0 12px;
   font-size: 22px;
