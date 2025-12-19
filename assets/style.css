@@ -16,9 +16,11 @@ body { outline: 6px solid red; }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* Offset anchor scrolling for sticky header */
 html {
-  scroll-padding-top: 140px; /* must be >= sticky header height */
+  scroll-padding-top: 170px;
 }
+
 
 body{
   margin:0;
