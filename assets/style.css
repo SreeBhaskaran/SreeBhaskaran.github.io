@@ -12,6 +12,7 @@
 
   --link: var(--smu-blue);
 }
+body { outline: 6px solid red; }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
