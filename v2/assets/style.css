@@ -161,3 +161,45 @@ a:hover{ text-decoration: underline; }
     grid-template-columns: 1fr;
   }
 }
+/* === Lakshmi-style cards / layout === */
+
+.cards-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* equal widths */
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.card{
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 16px;
+}
+
+/* Softer, flatter look (closer to Lakshmi; less “UI”) */
+.soft{
+  box-shadow: none;
+}
+
+.soft-blue{ background: rgba(53, 76, 161, 0.08); } /* SMU-ish blue tint */
+.soft-rose{ background: rgba(204, 0, 53, 0.07); }  /* SMU red tint */
+.soft-sand{ background: rgba(15, 23, 42, 0.04); }  /* neutral */
+
+.card h3, .card h4{
+  margin-top: 0;
+}
+
+.clean-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.card-stack{
+  margin-top: 18px;
+}
+
+/* Mobile: stack them */
+@media (max-width: 800px){
+  .cards-2{ grid-template-columns: 1fr; }
+}
