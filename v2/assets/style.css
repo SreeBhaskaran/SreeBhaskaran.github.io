@@ -160,6 +160,32 @@ a:hover{ text-decoration: underline; }
 .cards-top .card p{
   margin: 0;
 }
+/* Section header with action button (Lakshmi-style) */
+.section-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+/* Google Scholar button */
+.btn-scholar{
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--smu-red);
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-scholar:hover{
+  background: #a8002c; /* darker SMU red on hover */
+  text-decoration: none;
+}
 
 /* Slight spacing tweak for the subhead */
 .section-subhead{
