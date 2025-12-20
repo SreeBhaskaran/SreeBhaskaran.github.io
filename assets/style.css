@@ -58,7 +58,7 @@ h1{margin:0; font-size: 32px; letter-spacing:.2px}
 .avatar{
   width:140px;
   height:140px;
-  border-radius:999px;
+  border-radius:0px;
   overflow:hidden;                /* critical */
   border:2px solid rgba(53, 76, 161, .25);
   box-shadow: var(--shadow);
