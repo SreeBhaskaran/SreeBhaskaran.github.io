@@ -1,5 +1,14 @@
 // Tiny helpers: collapse + current year.
 document.getElementById('year').textContent = new Date().getFullYear();
+function setHeaderOffset() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const h = Math.ceil(header.getBoundingClientRect().height);
+  document.documentElement.style.setProperty('--header-offset', `${h + 10}px`); // +10 for breathing room
+}
+
+window.addEventListener('load', setHeaderOffset);
+window.addEventListener('resize', setHeaderOffset);
 
 document.querySelectorAll('.toggle').forEach(btn => {
   btn.addEventListener('click', () => {
