@@ -55,15 +55,15 @@ h1{margin:0; font-size: 32px; letter-spacing:.2px}
 .small{font-size: 13px}
 .muted{color:var(--muted)}
 
-.avatar{
-  width:140px; height:140px;
-  border-radius: 999px;
-  border: 2px dashed rgba(53, 76, 161, .35);
-  display:grid; place-items:center;
-  color: rgba(53, 76, 161, .80);
-  background: rgba(53, 76, 161, .06);
+.avatar-img{
+  width:140px;
+  height:140px;
+  border-radius:999px;
+  object-fit:cover;
+  border:2px solid rgba(53, 76, 161, .25);
+  box-shadow: var(--shadow);
+  display:block;
 }
-
 .nav{border-top:1px solid var(--border)}
 .nav-inner{
   display:flex; gap:14px; align-items:center;
