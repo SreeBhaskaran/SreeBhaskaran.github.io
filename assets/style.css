@@ -55,14 +55,21 @@ h1{margin:0; font-size: 32px; letter-spacing:.2px}
 .small{font-size: 13px}
 .muted{color:var(--muted)}
 
-.avatar-img{
-  width: 140px;        /* controls visible size */
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;   /* crops instead of stretching */
-  border: 2px solid rgba(53, 76, 161, .25);
+.avatar{
+  width:140px;
+  height:140px;
+  border-radius:999px;
+  overflow:hidden;                /* critical */
+  border:2px solid rgba(53, 76, 161, .25);
   box-shadow: var(--shadow);
-  display: block;
+  background: rgba(53, 76, 161, .06);
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;               /* crops nicely */
+  display:block;
 }
 
 .nav{border-top:1px solid var(--border)}
