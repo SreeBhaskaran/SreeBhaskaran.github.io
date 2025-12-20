@@ -136,70 +136,47 @@ a:hover{ text-decoration: underline; }
   .hero{ grid-template-columns: 1fr; }
   .hero-photo{ justify-content:flex-start; }
 }
-/* Two-column About + Education layout (Lakshmi-style) */
-.two-col{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 32px;
-  margin-top: 12px;
-}
+/* --- About section: Lakshmi-style colored panels --- */
 
-.clean-list{
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.clean-list li{
-  margin-bottom: 14px;
-  line-height: 1.5;
-}
-
-/* Mobile */
-@media (max-width: 800px){
-  .two-col{
-    grid-template-columns: 1fr;
-  }
-}
-/* === Lakshmi-style cards / layout === */
+.block{ padding: 18px 0; }              /* tighter like Lakshmi */
+.block h2{ margin: 0 0 8px; font-size: 24px; }
+.block h3{ margin: 14px 0 8px; font-size: 18px; }
+.block h4{ margin: 0 0 8px; font-size: 16px; }
 
 .cards-2{
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* equal widths */
+  grid-template-columns: 1fr 1fr;       /* equal widths */
   gap: 18px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .card{
-  border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 16px 16px;
+  padding: 16px 18px;
+  border: 1px solid rgba(15, 23, 42, .10); /* lighter border */
+  box-shadow: none;                       /* flatter */
 }
 
-/* Softer, flatter look (closer to Lakshmi; less “UI”) */
-.soft{
-  box-shadow: none;
-}
+.soft-blue{ background: rgba(53, 76, 161, 0.10); }
+.soft-rose{ background: rgba(204, 0, 53, 0.09); }
+.soft-sand{ background: rgba(15, 23, 42, 0.05); }
 
-.soft-blue{ background: rgba(53, 76, 161, 0.08); } /* SMU-ish blue tint */
-.soft-rose{ background: rgba(204, 0, 53, 0.07); }  /* SMU red tint */
-.soft-sand{ background: rgba(15, 23, 42, 0.04); }  /* neutral */
-
-.card h3, .card h4{
-  margin-top: 0;
-}
+.card ul{ margin: 0; padding-left: 18px; }
+.card li{ margin: 0 0 6px; }
 
 .clean-list{
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-
-.card-stack{
-  margin-top: 18px;
+.clean-list li{
+  margin: 0 0 10px;
+  line-height: 1.5;
 }
 
-/* Mobile: stack them */
+.card-stack{ margin-top: 18px; }
+
+/* Mobile: stack panels */
 @media (max-width: 800px){
   .cards-2{ grid-template-columns: 1fr; }
 }
