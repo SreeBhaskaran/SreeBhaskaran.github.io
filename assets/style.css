@@ -56,14 +56,15 @@ h1{margin:0; font-size: 32px; letter-spacing:.2px}
 .muted{color:var(--muted)}
 
 .avatar-img{
-  width:140px;
-  height:140px;
-  border-radius:999px;
-  object-fit:cover;
-  border:2px solid rgba(53, 76, 161, .25);
+  width: 140px;        /* controls visible size */
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;   /* crops instead of stretching */
+  border: 2px solid rgba(53, 76, 161, .25);
   box-shadow: var(--shadow);
-  display:block;
+  display: block;
 }
+
 .nav{border-top:1px solid var(--border)}
 .nav-inner{
   display:flex; gap:14px; align-items:center;
