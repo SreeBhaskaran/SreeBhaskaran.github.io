@@ -156,6 +156,27 @@ a:hover{ text-decoration: underline; }
   border: 1px solid rgba(15, 23, 42, .10); /* lighter border */
   box-shadow: none;                       /* flatter */
 }
+/* Make About section cards feel like Lakshmi’s */
+.cards-top .card p{
+  margin: 0;
+}
+
+/* Slight spacing tweak for the subhead */
+.section-subhead{
+  margin-top: 18px;
+}
+
+/* Add one more soft color so bottom row isn't "samey" */
+.soft-lav{ background: rgba(53, 76, 161, 0.06); }  /* light blue-lavender tint */
+
+/* Optional: make list indentation match the reference */
+.card ul{
+  margin: 0;
+  padding-left: 18px;
+}
+.card li{
+  margin: 0 0 6px;
+}
 
 .soft-blue{ background: rgba(53, 76, 161, 0.10); }
 .soft-rose{ background: rgba(204, 0, 53, 0.09); }
