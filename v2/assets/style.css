@@ -104,11 +104,8 @@ a:hover{ text-decoration: underline; }
   margin: 10px 0 6px;
 }
 
-.item{
-  margin: 10px 0 14px;
-  padding-left: 12px;
-  border-left: 3px solid rgba(53,76,161,.18);
-}
+.item{ margin: 0; padding: 0; border: 0; }
+
 .meta{ color: var(--muted); font-size: 14px; }
 
 .pubs{
