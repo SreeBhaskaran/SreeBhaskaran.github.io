@@ -168,6 +168,17 @@ a:hover{ text-decoration: underline; }
   gap: 16px;
   margin-bottom: 10px;
 }
+
+/* Email icon in header */
+.header a i,
+.hero a i{
+  margin-right: 6px;
+  font-size: 0.9em;
+  color: var(--smu-blue);
+  opacity: 0.85;
+  vertical-align: -1px;
+}
+
 /* Awards: clean rows (no bullets) */
 .award-row{
   display: flex;
