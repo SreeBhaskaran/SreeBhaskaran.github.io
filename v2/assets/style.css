@@ -219,6 +219,14 @@ a:hover{ text-decoration: underline; }
   font-size: 14px;
   white-space: nowrap;
 }
+.exp-card{
+  border-left: 3px solid rgba(53, 76, 161, .35);
+}
+@media (min-width: 900px){
+  .exp-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 
 /* Google Scholar button */
