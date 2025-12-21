@@ -176,6 +176,34 @@ a:hover{ text-decoration: underline; }
   padding: 10px 0;
   border-top: 1px solid rgba(15, 23, 42, .10);
 }
+/* Academic experience tiles (Lakshmi-style hover lift) */
+.exp-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.exp-card{
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.exp-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
+}
+
+.exp-card h4{
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.exp-card .meta{
+  margin: 0;
+}
 
 .award-row:first-child{
   border-top: 0;
