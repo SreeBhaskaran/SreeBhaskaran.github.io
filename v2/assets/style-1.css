@@ -1,0 +1,424 @@
+/* Minimal academic style inspired by lakshminittala.github.io with SMU accents */
+:root{
+  --text:#0f172a;
+  --muted:#475569;
+  --border: rgba(15, 23, 42, .14);
+  --bg:#ffffff;
+  --max: 980px;
+
+  --smu-red:#CC0035;
+  --smu-blue:#354CA1;
+  --link: var(--smu-blue);
+}
+
+*{ box-sizing:border-box; }
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top: 70px; /* sticky top nav height */
+}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height:1.65;
+  background:#fff;
+  color:var(--text);
+}
+
+a{ color: var(--link); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items:center;
+  padding: 14px 0;
+}
+.nav a{
+  padding: 4px 2px;
+  color: var(--text);
+}
+.nav a[aria-current="page"]{
+  font-weight: 700;
+  border-bottom: 2px solid var(--smu-blue);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1fr 180px;
+  gap: 18px;
+  padding: 28px 0 10px;
+  border-bottom: 1px solid var(--border);
+}
+.hero h1{ margin: 0 0 6px; font-size: 34px; letter-spacing: .2px; }
+.lead{ margin: 0 0 10px; color: var(--text); }
+.links{ margin: 8px 0 0; color: var(--muted); }
+.dot{ margin: 0 10px; color: var(--muted); }
+
+.hero-photo{
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
+}
+.hero-photo img{
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(53,76,161,.25);
+}
+
+.block{ padding: 22px 0; }
+
+.block h2{
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+.block h2::after{
+  content:"";
+  display:block;
+  width: 70px;
+  height: 3px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--smu-blue), var(--smu-red));
+  border-radius: 999px;
+}
+.block h3{ margin: 18px 0 8px; font-size: 18px; }
+.block h4{ margin: 12px 0 4px; font-size: 16px; }
+
+.twocol{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 10px 0 6px;
+}
+
+.item{ margin: 0; padding: 0; border: 0; }
+
+.meta{ color: var(--muted); font-size: 14px; }
+#experience h3{
+  margin: 18px 0 6px;
+  font-size: 18px;
+}
+
+#experience .meta{
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.pubs{
+  margin: 8px 0 0;
+  padding-left: 1.2rem;
+}
+.pubs li{ margin: 0 0 10px; }
+
+.fine{
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 780px){
+  .hero{ grid-template-columns: 1fr; }
+  .hero-photo{ justify-content:flex-start; }
+}
+/* --- About section: Lakshmi-style colored panels --- */
+
+.block{ padding: 18px 0; }              /* tighter like Lakshmi */
+.block h2{ margin: 0 0 8px; font-size: 24px; }
+.block h3{ margin: 14px 0 8px; font-size: 18px; }
+.block h4{ margin: 0 0 8px; font-size: 16px; }
+
+.cards-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;       /* equal widths */
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.card{
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 1px solid rgba(15, 23, 42, .10); /* lighter border */
+  box-shadow: none;                       /* flatter */
+}
+/* Make About section cards feel like Lakshmi’s */
+.cards-top .card p{
+  margin: 0;
+}
+/* Section header with action button (Lakshmi-style) */
+.section-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+/* Awards: clean rows (no bullets) */
+.award-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(15, 23, 42, .10);
+}
+/* Awards: keep year on same line, right-aligned */
+.award-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.award-title{
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.award-year{
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap; /* prevents wrapping */
+}
+
+/* Academic experience tiles (Lakshmi-style hover lift) */
+.exp-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+/* Academic experience: flat tiles (no shadow) */
+.exp-card{
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  box-shadow: none; /* no shadow by default */
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.exp-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
+}
+
+/* Awards tiles with subtle hover lift (Lakshmi-style) */
+.awards-grid{
+  margin-top: 12px;
+}
+
+.award-card{
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.award-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
+}
+
+.award-title{
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.award-year{
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.exp-card h4{
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.exp-card .meta{
+  margin: 0;
+}
+
+.award-row:first-child{
+  border-top: 0;
+  padding-top: 0;
+}
+
+.award-title{
+  font-weight: 500;
+}
+
+.award-year{
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+.exp-card{
+  border-left: 3px solid rgba(53, 76, 161, .35);
+}
+
+/* Google Scholar button */
+.btn-scholar{
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--smu-red);
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-scholar:hover{
+  background: #a8002c; /* darker SMU red on hover */
+  text-decoration: none;
+}
+
+/* Slight spacing tweak for the subhead */
+.section-subhead{
+  margin-top: 18px;
+}
+
+/* Add one more soft color so bottom row isn't "samey" */
+.soft-lav{ background: rgba(53, 76, 161, 0.06); }  /* light blue-lavender tint */
+
+/* Optional: make list indentation match the reference */
+.card ul{
+  margin: 0;
+  padding-left: 18px;
+}
+.card li{
+  margin: 0 0 6px;
+}
+
+.soft-blue{ background: rgba(53, 76, 161, 0.10); }
+.soft-rose{ background: rgba(204, 0, 53, 0.09); }
+.soft-sand{ background: rgba(15, 23, 42, 0.05); }
+
+.card ul{ margin: 0; padding-left: 18px; }
+.card li{ margin: 0 0 6px; }
+
+.clean-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+/* Education sub-lines (Lakshmi-style) */
+.edu-sub{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.clean-list li{
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.card-stack{ margin-top: 18px; }
+/* Teaching tiles (2x2 layout) */
+.teaching-grid{
+  margin-top: 12px;
+}
+
+.teaching-card{
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.teaching-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
+}
+
+.teaching-card h4{
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+.teaching-card .meta{
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.teaching-card p{
+  margin: 0;
+  line-height: 1.55;
+}
+/* Service tiles */
+.service-grid{
+  margin-top: 12px;
+}
+/* Teaching icons (subtle, Lakshmi-style) */
+.teaching-card h4 i{
+  margin-right: 8px;
+  color: var(--smu-blue);
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+.teaching-card:hover h4 i{
+  opacity: 1;
+}
+
+.service-card{
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.service-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
+}
+
+.service-card h4{
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.service-list{
+  margin: 0;
+  padding-left: 18px; /* keeps it clean */
+}
+
+.service-list li{
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+/* Mobile: stack tiles */
+@media (max-width: 800px){
+  .cards-2{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile: stack panels */
+@media (max-width: 800px){
+  .cards-2{ grid-template-columns: 1fr; }
+}
+@media (max-width: 600px){
+  .section-head{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
