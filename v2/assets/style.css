@@ -327,6 +327,45 @@ a:hover{ text-decoration: underline; }
 }
 
 .card-stack{ margin-top: 18px; }
+/* Teaching tiles (2x2 layout) */
+.teaching-grid{
+  margin-top: 12px;
+}
+
+.teaching-card{
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.teaching-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
+}
+
+.teaching-card h4{
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+.teaching-card .meta{
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.teaching-card p{
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Mobile: stack tiles */
+@media (max-width: 800px){
+  .cards-2{
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Mobile: stack panels */
 @media (max-width: 800px){
