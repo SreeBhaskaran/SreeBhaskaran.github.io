@@ -363,6 +363,13 @@ a:hover{ text-decoration: underline; }
 .service-grid{
   margin-top: 12px;
 }
+/* Teaching icons (subtle, Lakshmi-style) */
+.teaching-card h4 i{
+  margin-right: 8px;
+  color: var(--smu-blue);
+  font-size: 0.9em;
+  opacity: 0.85;
+}
 
 .service-card{
   padding: 16px 18px;
