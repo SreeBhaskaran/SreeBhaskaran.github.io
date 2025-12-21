@@ -371,6 +371,9 @@ a:hover{ text-decoration: underline; }
 .pub-year{
   white-space: nowrap;
 }
+.pub-card{
+  padding: 18px 20px;   /* slightly more breathing room */
+}
 
 @media (max-width: 800px){
   .pub-grid{
