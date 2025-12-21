@@ -370,6 +370,9 @@ a:hover{ text-decoration: underline; }
   font-size: 0.9em;
   opacity: 0.85;
 }
+.teaching-card:hover h4 i{
+  opacity: 1;
+}
 
 .service-card{
   padding: 16px 18px;
