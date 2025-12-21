@@ -195,6 +195,32 @@ a:hover{ text-decoration: underline; }
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
 }
+/* Awards tiles with subtle hover lift (Lakshmi-style) */
+.awards-grid{
+  margin-top: 12px;
+}
+
+.award-card{
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.award-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
+}
+
+.award-title{
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.award-year{
+  font-size: 14px;
+  color: var(--muted);
+}
 
 .exp-card h4{
   margin: 0 0 4px;
