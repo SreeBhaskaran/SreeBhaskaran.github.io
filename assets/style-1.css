@@ -328,58 +328,6 @@ a:hover{ text-decoration: underline; }
   margin: 0 0 10px;
   line-height: 1.5;
 }
-/* Publications tiles */
-.pub-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* ✅ force two columns */
-  gap: 22px;                      /* ✅ more separation */
-  margin-top: 16px;
-}
-
-.pub-card{
-  padding: 16px 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(15, 23, 42, .10);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
-.pub-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
-}
-
-.pub-card h4{
-  margin: 0 0 6px;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.pub-authors{
-  margin: 0 0 10px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.pub-meta{
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.pub-year{
-  white-space: nowrap;
-}
-.pub-card{
-  padding: 18px 20px;   /* slightly more breathing room */
-}
-
-@media (max-width: 800px){
-  .pub-grid{
-    grid-template-columns: 1fr;
-  }
-}
 
 .card-stack{ margin-top: 18px; }
 /* Teaching tiles (2x2 layout) */
@@ -456,39 +404,6 @@ a:hover{ text-decoration: underline; }
   line-height: 1.5;
 }
 
-/* Industry experience tiles */
-.industry-grid{
-  margin-top: 12px;
-}
-
-.industry-card{
-  padding: 16px 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(15, 23, 42, .10);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
-.industry-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(2, 6, 23, .12);
-}
-
-.industry-card h4{
-  margin: 0 0 2px;
-  font-weight: 600;
-}
-
-.industry-card .meta{
-  margin: 0 0 8px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.industry-card p{
-  margin: 0;
-  line-height: 1.55;
-}
-
 /* Mobile: stack tiles */
 @media (max-width: 800px){
   .cards-2{
@@ -507,4 +422,3 @@ a:hover{ text-decoration: underline; }
     gap: 8px;
   }
 }
-
