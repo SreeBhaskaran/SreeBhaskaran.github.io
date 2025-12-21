@@ -176,6 +176,25 @@ a:hover{ text-decoration: underline; }
   padding: 10px 0;
   border-top: 1px solid rgba(15, 23, 42, .10);
 }
+/* Awards: keep year on same line, right-aligned */
+.award-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.award-title{
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.award-year{
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap; /* prevents wrapping */
+}
+
 /* Academic experience tiles (Lakshmi-style hover lift) */
 .exp-grid{
   display: grid;
