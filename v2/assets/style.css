@@ -331,9 +331,9 @@ a:hover{ text-decoration: underline; }
 /* Publications tiles */
 .pub-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 12px;
+  grid-template-columns: 1fr 1fr; /* ✅ force two columns */
+  gap: 22px;                      /* ✅ more separation */
+  margin-top: 16px;
 }
 
 .pub-card{
