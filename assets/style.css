@@ -236,6 +236,10 @@ a:hover{ text-decoration: underline; }
   box-shadow: none; /* no shadow by default */
   transition: transform .18s ease, box-shadow .18s ease;
 }
+/* Academic experience: remove left accent border */
+.exp-card{
+  border-left: none !important;
+}
 
 .exp-card:hover{
   transform: translateY(-4px);
