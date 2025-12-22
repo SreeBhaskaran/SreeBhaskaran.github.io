@@ -178,6 +178,20 @@ a:hover{ text-decoration: underline; }
   opacity: 0.85;
   vertical-align: -1px;
 }
+/* Header / contact icons */
+.header a i,
+.hero a i{
+  margin-right: 6px;
+  font-size: 0.9em;
+  color: var(--smu-blue);
+  opacity: 0.85;
+  vertical-align: -1px;
+}
+
+.header a:hover i,
+.hero a:hover i{
+  color: var(--smu-red);
+}
 
 /* Awards: clean rows (no bullets) */
 .award-row{
