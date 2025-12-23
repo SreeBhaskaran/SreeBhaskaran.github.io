@@ -3,39 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog | Sreekumar R. Bhaskaran</title>
-  <meta name="description" content="Blog posts by Sreekumar R. Bhaskaran" />
+  <title>The Looking Glass | Sreekumar R. Bhaskaran</title>
+  <meta name="description" content="Blog posts on innovation, technology, and operations." />
+
+  <!-- Font Awesome (if you’re using icons elsewhere) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+  <!-- Top nav (match your main site) -->
   <header class="topbar">
     <div class="wrap">
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="blog.html" aria-current="page">Blog</a>
-        <a href="assets/CV_SreeBhaskaran.pdf" download>CV (PDF)</a>
+        <a href="./index.html">Home</a>
+        <a href="./blog.html" aria-current="page">Blog</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="block">
+    <!-- Blog hero (aligned with homepage hero style) -->
+    <section class="blog-hero">
       <h1>The Looking Glass</h1>
+
       <div class="blog-intro">
-  <div class="blog-eyebrow">Innovation, Technology, and Operations.</div>
-  <div class="blog-sub">
-    How ideas are designed, tested, and scaled under uncertainty.
-  </div>
-</div>
+        <div class="blog-eyebrow">Innovation, Technology, and Operations.</div>
+        <div class="blog-sub">
+          How ideas are designed, tested, and scaled under uncertainty.
+        </div>
+      </div>
 
+      <!-- subtle divider line like section headers -->
+      <div class="accent-rule"></div>
+    </section>
 
-      <h2>Posts</h2>
-      <ul>
-        <li><a href="#" target="_blank" rel="noopener noreferrer">Post title #1</a> <span class="meta">— Jan 2026</span></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer">Post title #2</a> <span class="meta">— Dec 2025</span></li>
-      </ul>
+    <!-- Post list -->
+    <section class="block">
+      <div class="post-list">
 
-      <p class="fine">Tip: If you want on-site posts, I can create <code>posts/</code> pages and link them here.</p>
+        <!-- Post item -->
+        <article class="post-item">
+          <div class="post-top">
+            <h3 class="post-title">
+              <a href="#">Experimentation Under Uncertainty</a>
+            </h3>
+            <div class="post-date">2025-12-22</div>
+          </div>
+          <div class="post-tags">
+            <span class="tag">Innovation</span>
+            <span class="tag">Experimentation</span>
+            <span class="tag">Strategy</span>
+          </div>
+          <p class="post-snippet">
+            Why experimentation is as much an operational design problem as a statistical one—especially when measurement is noisy and incentives matter.
+          </p>
+        </article>
+
+        <article class="post-item">
+          <div class="post-top">
+            <h3 class="post-title">
+              <a href="#">AI as a Complement to Operational Judgment</a>
+            </h3>
+            <div class="post-date">2025-12-10</div>
+          </div>
+          <div class="post-tags">
+            <span class="tag">AI</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Decision Making</span>
+          </div>
+          <p class="post-snippet">
+            A practical lens on where AI improves execution—and where organizational design and incentives dominate model quality.
+          </p>
+        </article>
+
+        <article class="post-item">
+          <div class="post-top">
+            <h3 class="post-title">
+              <a href="#">Platforms, Matching, and the Hidden Operations Layer</a>
+            </h3>
+            <div class="post-date">2025-11-28</div>
+          </div>
+          <div class="post-tags">
+            <span class="tag">Platforms</span>
+            <span class="tag">Market Design</span>
+            <span class="tag">Operations</span>
+          </div>
+          <p class="post-snippet">
+            Matching platforms look like software products, but their performance is governed by operational choices: information, timing, and policy.
+          </p>
+        </article>
+
+      </div>
+
+      <footer class="fine">
+        © <span id="year"></span> Sreekumar R. Bhaskaran
+      </footer>
     </section>
   </main>
 
