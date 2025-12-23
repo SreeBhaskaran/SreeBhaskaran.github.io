@@ -194,6 +194,36 @@ a:hover{ text-decoration: underline; }
   color: var(--muted);
   line-height: 1.5;
 }
+/* Subtle hero animation (respects reduced motion) */
+@media (prefers-reduced-motion: no-preference){
+  .reveal-title,
+  .reveal-sub,
+  .reveal-sub2,
+  .reveal-mark{
+    opacity: 0;
+    transform: translateY(8px);
+    animation: heroIn .55s ease forwards;
+  }
+
+  .reveal-title{ animation-delay: .05s; }
+  .reveal-sub{ animation-delay: .14s; }
+  .reveal-sub2{ animation-delay: .22s; }
+
+  /* logo comes in from the right slightly */
+  .reveal-mark{
+    transform: translateX(10px);
+    animation: markIn .65s ease forwards;
+    animation-delay: .18s;
+  }
+
+  @keyframes heroIn{
+    to{ opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes markIn{
+    to{ opacity: 1; transform: translateX(0); }
+  }
+}
 
 /* Divider line like section headers */
 .accent-rule{
