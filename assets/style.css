@@ -76,6 +76,69 @@ a:hover{ text-decoration: underline; }
     radial-gradient(820px 300px at 90% 10%, rgba(204, 0, 53, 0.14), transparent 55%),
     linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,1));
 }
+/* Blog hero layout with right-aligned logo */
+.blog-hero{
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(900px 320px at 10% 0%, rgba(53, 76, 161, 0.16), transparent 60%),
+    radial-gradient(820px 300px at 90% 10%, rgba(204, 0, 53, 0.14), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,1));
+}
+
+.blog-hero-inner{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  gap: 28px;
+}
+
+.blog-hero-text{
+  max-width: 620px;
+}
+
+.blog-title{
+  margin: 0 0 10px;
+  font-size: 36px;
+  letter-spacing: .2px;
+}
+
+.blog-eyebrow{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.blog-sub{
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.blog-hero-mark{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 120px;       /* controls visual weight */
+}
+
+.blog-hero-mark svg{
+  height: 100%;
+  max-height: 140px;  /* fills hero vertically */
+  width: auto;
+  opacity: 0.9;
+}
+
+/* Mobile: move logo below text */
+@media (max-width: 700px){
+  .blog-hero-inner{
+    grid-template-columns: 1fr;
+  }
+  .blog-hero-mark{
+    justify-content: flex-start;
+    margin-top: 16px;
+  }
+}
 
 .blog-head{
   display: flex;
