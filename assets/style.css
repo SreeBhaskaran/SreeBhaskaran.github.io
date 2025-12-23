@@ -233,6 +233,43 @@ a:hover{ text-decoration: underline; }
   background: linear-gradient(90deg, var(--smu-blue), var(--smu-red));
   border-radius: 999px;
 }
+/* Split navigation: left sections, right utilities */
+.nav-split{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-left,
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Right-side utility links */
+.nav-right a{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.nav-right a i{
+  font-size: 13px;
+  opacity: .7;
+}
+
+.nav-right a:hover i{
+  opacity: 1;
+}
+
+/* Optional: subtle divider feel */
+.nav-right{
+  padding-left: 18px;
+}
 
 /* Blog posts: add gentle color depth */
 .post-item{
