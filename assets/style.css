@@ -85,6 +85,25 @@ a:hover{ text-decoration: underline; }
     radial-gradient(820px 300px at 90% 10%, rgba(204, 0, 53, 0.14), transparent 55%),
     linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,1));
 }
+.blog-hero{
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(900px 320px at 10% 0%, rgba(53, 76, 161, 0.16), transparent 60%),
+    radial-gradient(820px 300px at 90% 10%, rgba(204, 0, 53, 0.14), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,1));
+}
+
+/* NEW: inset content slightly from edges */
+.blog-hero-inner{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  gap: 28px;
+
+  padding-left: 8px;   /* 👈 key change */
+  padding-right: 8px;
+}
 
 .blog-hero-inner{
   display: grid;
