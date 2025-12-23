@@ -147,6 +147,16 @@ a:hover{ text-decoration: underline; }
   width: auto;
   opacity: 0.9;
 }
+.nav-wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-right{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
 
 /* Mobile: move logo below text */
 @media (max-width: 700px){
