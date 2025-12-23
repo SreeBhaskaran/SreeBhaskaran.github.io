@@ -93,6 +93,10 @@ a:hover{ text-decoration: underline; }
     radial-gradient(820px 300px at 90% 10%, rgba(204, 0, 53, 0.14), transparent 55%),
     linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,1));
 }
+/* Blog-only nav: force right alignment */
+.nav-blog{
+  justify-content: flex-end;
+}
 
 /* NEW: inset content slightly from edges */
 .blog-hero-inner{
