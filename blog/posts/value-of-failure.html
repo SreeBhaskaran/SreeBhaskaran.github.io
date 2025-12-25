@@ -94,10 +94,6 @@
       background: rgba(15,23,42,.02);
       line-height: 1.35;
     }
-    figure.mag-img figcaption span{
-      float:right;
-      opacity:.85;
-    }
 
     /* floated versions (text wrap) */
     figure.mag-img.float-right,
@@ -112,13 +108,6 @@
     figure.mag-img.float-left{
       float:left;
       margin: 8px 18px 14px 0;
-    }
-
-    /* full-width image (breaks the flow like a feature) */
-    figure.mag-img.full{
-      width: 100%;
-      max-width: 100%;
-      margin: 18px 0 18px;
     }
 
     /* clear floats between sections */
@@ -137,10 +126,26 @@
         max-width: 100%;
         margin: 14px 0;
       }
-      figure.mag-img figcaption span{
-        float:none;
-        display:block;
-        margin-top:6px;
+    }
+
+    /* --- Scroll fade-in animation --- */
+    .reveal{
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .8s ease, transform .8s ease;
+      will-change: opacity, transform;
+    }
+    .reveal.visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Respect reduced motion preferences */
+    @media (prefers-reduced-motion: reduce){
+      .reveal{
+        opacity:1 !important;
+        transform:none !important;
+        transition:none !important;
       }
     }
 
@@ -181,13 +186,10 @@
 
       <section class="post-section clearfix">
 
-        <!-- A1: clean and minimal — perfect early hook -->
-        <figure class="mag-img float-right">
+        <!-- A1 -->
+        <figure class="mag-img float-right reveal">
           <img src="../assets/img/A1.jpg" alt="A magnifying glass next to a laptop">
-          <figcaption>
-            Experimentation is easy. Learning is harder.
-            <span>Photo: Unsplash</span>
-          </figcaption>
+          <figcaption>Experimentation is easy. Learning is harder.</figcaption>
         </figure>
 
         <p>
@@ -203,7 +205,6 @@
           observed, many companies that “had fun experimenting” are now under pressure to demonstrate real returns from those efforts.
         </p>
 
-        <!-- WSJ quote callout -->
         <div class="quote-callout">
           <div class="quote-text">
             “Business technology leaders are winding down two years of fast-paced artificial intelligence experiments… and putting their AI dollars toward proven projects focused on return on investment.”
@@ -219,7 +220,6 @@
           and even those that do often find meaningful returns elusive.
         </p>
 
-        <!-- Forbes quote callout -->
         <div class="quote-callout red-accent">
           <div class="quote-text">
             “Despite more than $30 billion in enterprise investment, most organizations can’t get past the pilot phase, and even those that do often find meaningful returns elusive.”
@@ -234,7 +234,6 @@
               target="_blank" rel="noopener noreferrer"><em>CIO</em></a>).
         </p>
 
-        <!-- CIO quote callout -->
         <div class="quote-callout">
           <div class="quote-text">
             “Unclear objectives, insufficient data readiness, and a lack of in-house expertise are sinking many AI proofs of concept.”
@@ -242,27 +241,12 @@
           <div class="quote-source">— <em>CIO</em></div>
         </div>
 
-        <!-- Featured sources -->
         <div class="sources-card">
           <h3>Featured sources</h3>
           <ul>
-            <li>
-              <a href="https://www.wsj.com/ARTICLE-LINK-HERE" target="_blank" rel="noopener noreferrer">
-                Wall Street Journal — AI experimentation shifting toward ROI
-              </a>
-            </li>
-            <li>
-              <a href="https://www.forbes.com/councils/forbestechcouncil/2025/10/03/the-ai-strategy-thats-actually-working-why-95-of-enterprise-pilots-fail-and-how-to-join-the-5/"
-                 target="_blank" rel="noopener noreferrer">
-                Forbes — Why 95% of enterprise AI pilots fail
-              </a>
-            </li>
-            <li>
-              <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html"
-                 target="_blank" rel="noopener noreferrer">
-                CIO — 88% of AI pilots fail to reach production
-              </a>
-            </li>
+            <li><a href="https://www.wsj.com/ARTICLE-LINK-HERE" target="_blank" rel="noopener noreferrer">Wall Street Journal — AI experimentation shifting toward ROI</a></li>
+            <li><a href="https://www.forbes.com/councils/forbestechcouncil/2025/10/03/the-ai-strategy-thats-actually-working-why-95-of-enterprise-pilots-fail-and-how-to-join-the-5/" target="_blank" rel="noopener noreferrer">Forbes — Why 95% of enterprise AI pilots fail</a></li>
+            <li><a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html" target="_blank" rel="noopener noreferrer">CIO — 88% of AI pilots fail to reach production</a></li>
           </ul>
         </div>
 
@@ -271,13 +255,10 @@
       <section class="post-section clearfix">
         <h2>Where the Problem Lies: Method and Intent</h2>
 
-        <!-- A2: sticky notes = messy experimentation & ambiguity -->
-        <figure class="mag-img float-left">
+        <!-- A2 -->
+        <figure class="mag-img float-left reveal">
           <img src="../assets/img/A2.jpg" alt="Wall covered in sticky notes">
-          <figcaption>
-            Lots of activity doesn’t always translate into learning.
-            <span>Photo: Unsplash</span>
-          </figcaption>
+          <figcaption>Lots of activity doesn’t always translate into learning.</figcaption>
         </figure>
 
         <p>
@@ -320,13 +301,10 @@
       <section class="post-section clearfix">
         <h2>Why Firms Often Mislearn</h2>
 
-        <!-- A3: abstract wave = signal/noise, uncertainty -->
-        <figure class="mag-img float-right">
+        <!-- A3 -->
+        <figure class="mag-img float-right reveal">
           <img src="../assets/img/A3.jpg" alt="Abstract wave pattern symbolizing noise and signal">
-          <figcaption>
-            Under uncertainty, outcomes blend signal and noise.
-            <span>Photo: Unsplash</span>
-          </figcaption>
+          <figcaption>Under uncertainty, outcomes blend signal and noise.</figcaption>
         </figure>
 
         <p>
@@ -365,13 +343,10 @@
           When people know they are being evaluated, they optimize for winning the evaluation, not for producing the best underlying outcome.
         </p>
 
-        <!-- A4: chess pawn = incentives, gaming evaluation -->
-        <figure class="mag-img float-left">
+        <!-- A4 -->
+        <figure class="mag-img float-left reveal">
           <img src="../assets/img/A4.jpg" alt="Chess pawn representing strategy and incentives">
-          <figcaption>
-            Evaluation changes behavior: people optimize for the scorecard.
-            <span>Photo: Unsplash</span>
-          </figcaption>
+          <figcaption>Evaluation changes behavior: people optimize for the scorecard.</figcaption>
         </figure>
 
         <p>
@@ -387,13 +362,10 @@
       <section class="post-section clearfix">
         <h2>Experimentation in the Age of AI</h2>
 
-        <!-- A5: track lanes = pilots -> scaling, performance pressure -->
-        <figure class="mag-img float-right">
+        <!-- A5 -->
+        <figure class="mag-img float-right reveal">
           <img src="../assets/img/A5.jpg" alt="Track lanes representing competition and scaling">
-          <figcaption>
-            The winners won’t test more—they’ll test smarter.
-            <span>Photo: Unsplash</span>
-          </figcaption>
+          <figcaption>The winners won’t test more—they’ll test smarter.</figcaption>
         </figure>
 
         <p>
@@ -411,40 +383,36 @@
       <footer class="refs clearfix">
         <h3>Sources &amp; References</h3>
         <ul>
-          <li>
-            <a href="https://www.wsj.com/articles/companies-had-fun-experimenting-with-ai-now-they-have-to-show-the-returns-2a683592" target="_blank" rel="noopener noreferrer">
-              Wall Street Journal — AI experimentation shifting toward ROI
-            </a>
-          </li>
-          <li>
-            <a href="https://www.forbes.com/councils/forbestechcouncil/2025/10/03/the-ai-strategy-thats-actually-working-why-95-of-enterprise-pilots-fail-and-how-to-join-the-5/"
-               target="_blank" rel="noopener noreferrer">
-              Forbes — Why 95% of enterprise AI pilots fail
-            </a>
-          </li>
-          <li>
-            <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html"
-               target="_blank" rel="noopener noreferrer">
-              CIO — 88% of AI pilots fail to reach production
-            </a>
-          </li>
-          <li>
-            <a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2024.1133"
-               target="_blank" rel="noopener noreferrer">
-              Optimal Prototyping with Noisy Measurements (M&amp;SOM)
-            </a>
-          </li>
-          <li>
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4976827"
-               target="_blank" rel="noopener noreferrer">
-              Data Science Contests and the Perils of Intermediate Split Ratios (SSRN)
-            </a>
-          </li>
+          <li><a href="https://www.wsj.com/ARTICLE-LINK-HERE" target="_blank" rel="noopener noreferrer">Wall Street Journal — AI experimentation shifting toward ROI</a></li>
+          <li><a href="https://www.forbes.com/councils/forbestechcouncil/2025/10/03/the-ai-strategy-thats-actually-working-why-95-of-enterprise-pilots-fail-and-how-to-join-the-5/" target="_blank" rel="noopener noreferrer">Forbes — Why 95% of enterprise AI pilots fail</a></li>
+          <li><a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html" target="_blank" rel="noopener noreferrer">CIO — 88% of AI pilots fail to reach production</a></li>
+          <li><a href="https://pubsonline.informs.org/doi/abs/10.1287/msom.2024.1133" target="_blank" rel="noopener noreferrer">Optimal Prototyping with Noisy Measurements (M&amp;SOM)</a></li>
+          <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4976827" target="_blank" rel="noopener noreferrer">Data Science Contests and the Perils of Intermediate Split Ratios (SSRN)</a></li>
         </ul>
       </footer>
 
     </article>
   </main>
+
+  <!-- Scroll reveal script -->
+  <script>
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      if(!('IntersectionObserver' in window)){
+        els.forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
 
 </body>
 </html>
