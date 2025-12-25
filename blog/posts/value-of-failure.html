@@ -290,12 +290,7 @@
         </p>
 
         <p>
-          The authors’ model and empirical analysis of data science contests illustrate this dynamic clearly. Many firms run Kaggle-style competitions,
-          releasing training data while reserving a private test set to rank submissions. Statistically, an intermediate train–test split seems ideal:
-          enough training data to build strong models, and enough test data to reliably rank them. But incentives change the picture. When ranking becomes most reliable,
-          contestants have the strongest incentive to submit higher-variance “lottery ticket” models—approaches that are worse on average but occasionally score extremely well.
-          An empirical analysis of Kaggle contests over the past five years finds patterns consistent with this behavior. The implication is unsettling:
-          firms may accurately pick a winner from a pool of inaccurate submissions.
+         The authors’ model and empirical analysis of data science contests illustrate this dynamic clearly. Many firms run contest-style competitions, releasing training data while reserving a private test set to rank submissions. Statistically, an intermediate train–test split seems ideal: enough training data to build strong models, and enough test data to reliably rank them. But incentives change the picture. When the firm’s evaluation is most reliable—when it can most accurately distinguish high-performing from low-performing submissions—contestants have the strongest incentive to submit higher-variance “lottery ticket” models: approaches that are worse on average but occasionally score extremely well. This is exactly what an empirical analysis of Kaggle contests over the past five years uncovers. The implication is unsettling: firms may accurately pick a winner, but from a pool of inaccurate submissions.
         </p>
       </section>
 
