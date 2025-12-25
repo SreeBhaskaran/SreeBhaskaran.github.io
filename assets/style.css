@@ -926,6 +926,50 @@ a:hover{ text-decoration: underline; }
   background: rgba(204, 0, 53, 0.10);
   border: 1px solid rgba(204, 0, 53, 0.18);
 }
+/* --- Featured Sources block --- */
+.sources-card{
+  border: 1px solid var(--border);
+  background: rgba(53,76,161,.05);
+  border-radius: 14px;
+  padding: 14px 14px;
+  margin: 18px 0;
+}
+.sources-card h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.sources-card ul{
+  margin: 0;
+  padding-left: 18px;
+}
+.sources-card li{
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* --- Quote callouts --- */
+.quote-callout{
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--smu-blue);
+  background: rgba(15,23,42,.03);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 18px 0;
+}
+.quote-callout.red-accent{
+  border-left-color: var(--smu-red);
+  background: rgba(204,0,53,.05);
+}
+.quote-text{
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+.quote-source{
+  font-size: 13px;
+  color: var(--muted);
+  text-align: right;
+}
 
 /* Mobile: date drops below title cleanly */
 @media (max-width: 600px){
