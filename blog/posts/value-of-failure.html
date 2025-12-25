@@ -27,14 +27,6 @@
     .post-section { padding: 14px 0; }
     .post-section h2 { margin: 22px 0 10px; font-size: 22px; }
     .post-section p { margin: 0 0 14px; }
-    .callout { border: 1px solid var(--border); background: rgba(204,0,53,.06); border-radius: 14px; padding: 14px; margin: 18px 0; }
-    .pullquote { margin: 18px 0; padding: 14px 16px; border-left: 4px solid var(--smu-red); background: rgba(15,23,42,.03); border-radius: 12px; font-size: 18px; line-height: 1.4; }
-    .post-img { margin: 18px 0; border-radius: 14px; border: 1px solid var(--border); overflow:hidden; background:#fff; }
-    .post-img img { display:block; width:100%; height:auto; }
-    .caption { font-size: 13px; color: var(--muted); padding: 10px 12px; border-top: 1px solid var(--border); background: rgba(15,23,42,.02); }
-    .refs { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border); }
-    .refs ul { margin: 8px 0 0; padding-left: 18px; }
-    .refs li { margin: 10px 0; line-height: 1.45; }
 
     /* --- Featured Sources block --- */
     .sources-card{
@@ -80,6 +72,81 @@
       color: var(--muted);
       text-align: right;
     }
+
+    /* --- Magazine inline images --- */
+    figure.mag-img{
+      margin: 12px 0 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+    }
+    figure.mag-img img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+    figure.mag-img figcaption{
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: rgba(15,23,42,.02);
+      line-height: 1.35;
+    }
+    figure.mag-img figcaption span{
+      float:right;
+      opacity:.85;
+    }
+
+    /* floated versions (text wrap) */
+    figure.mag-img.float-right,
+    figure.mag-img.float-left{
+      width: 42%;
+      max-width: 360px;
+    }
+    figure.mag-img.float-right{
+      float:right;
+      margin: 8px 0 14px 18px;
+    }
+    figure.mag-img.float-left{
+      float:left;
+      margin: 8px 18px 14px 0;
+    }
+
+    /* full-width image (breaks the flow like a feature) */
+    figure.mag-img.full{
+      width: 100%;
+      max-width: 100%;
+      margin: 18px 0 18px;
+    }
+
+    /* clear floats between sections */
+    .clearfix::after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+
+    /* mobile: stack images */
+    @media (max-width: 760px){
+      figure.mag-img.float-right,
+      figure.mag-img.float-left{
+        float:none;
+        width: 100%;
+        max-width: 100%;
+        margin: 14px 0;
+      }
+      figure.mag-img figcaption span{
+        float:none;
+        display:block;
+        margin-top:6px;
+      }
+    }
+
+    .refs { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border); }
+    .refs ul { margin: 8px 0 0; padding-left: 18px; }
+    .refs li { margin: 10px 0; line-height: 1.45; }
   </style>
 </head>
 
@@ -112,14 +179,27 @@
         </p>
       </header>
 
-      <section class="post-section">
+      <section class="post-section clearfix">
+
+        <!-- A1: clean and minimal — perfect early hook -->
+        <figure class="mag-img float-right">
+          <img src="../assets/img/A1.jpg" alt="A magnifying glass next to a laptop">
+          <figcaption>
+            Experimentation is easy. Learning is harder.
+            <span>Photo: Unsplash</span>
+          </figcaption>
+        </figure>
+
         <p>
           Across industries, firms are running more experiments than ever—yet many are less sure what they are learning.
           With consumers becoming more discerning and competitive pressure to find what works, firms increasingly rely on pilots,
           A/B tests, and proof-of-concepts before committing meaningful resources. This is especially true in digital products,
           innovation, and AI—domains where the rules are still emerging and early feedback can be difficult to interpret.
-          The logic is straightforward: experiment early, learn cheaply, and avoid costly mistakes later.
-          Yet, as a recent <a href="https://www.wsj.com/articles/companies-had-fun-experimenting-with-ai-now-they-have-to-show-the-returns-2a683592" target="_blank" rel="noopener noreferrer"><em>Wall Street Journal</em> article</a>
+        </p>
+
+        <p>
+          The logic is straightforward: experiment early, learn cheaply, and avoid costly mistakes later. Yet, as a recent
+          <a href="https://www.wsj.com/ARTICLE-LINK-HERE" target="_blank" rel="noopener noreferrer"><em>Wall Street Journal</em> article</a>
           observed, many companies that “had fun experimenting” are now under pressure to demonstrate real returns from those efforts.
         </p>
 
@@ -186,27 +266,25 @@
           </ul>
         </div>
 
-        <div class="callout">
-          <strong>Key takeaway:</strong> Many firms aren’t struggling because they lack experimentation—they’re struggling because they lack
-          interpretability and scalability of what experiments reveal.
-        </div>
       </section>
 
-      <!-- IMAGE 1 -->
-      <div class="post-img">
-        <img src="../assets/img/wordle.png" alt="Learning from Wordle illustration">
-        <div class="caption">Failure can be the most informative feedback—if the guess was designed to learn.</div>
-      </div>
-
-      <section class="post-section">
+      <section class="post-section clearfix">
         <h2>Where the Problem Lies: Method and Intent</h2>
+
+        <!-- A2: sticky notes = messy experimentation & ambiguity -->
+        <figure class="mag-img float-left">
+          <img src="../assets/img/A2.jpg" alt="Wall covered in sticky notes">
+          <figcaption>
+            Lots of activity doesn’t always translate into learning.
+            <span>Photo: Unsplash</span>
+          </figcaption>
+        </figure>
 
         <p>
           So where does the problem lie? It lies in both the method and the intent behind experimentation.
           Executives increasingly report pilots that generate mixed or contradictory signals, experiments that fail to scale,
           and early results that are difficult to interpret with confidence. In many cases, the challenge is not a lack of data—it is the nature
-          of the information experiments generate. Early feedback is often noisy, incomplete, and easy to misread. And without clarity on the purpose
-          of the experiment, even good data can lead to ambiguous conclusions.
+          of the information experiments generate. Early feedback is often noisy, incomplete, and easy to misread.
         </p>
 
         <p>
@@ -217,13 +295,7 @@
         </p>
       </section>
 
-      <!-- IMAGE 2 -->
-      <div class="post-img">
-        <img src="../assets/img/signal-noise.png" alt="Signal vs noise illustration">
-        <div class="caption">Observed outcomes mix signal + noise — clarity requires smart design, not volume.</div>
-      </div>
-
-      <section class="post-section">
+      <section class="post-section clearfix">
         <h2>A Simple Lens: What Wordle Teaches About Learning</h2>
 
         <p>
@@ -236,22 +308,26 @@
           Take, for example, a guess that appears to “work” early in the game—when you start with a word that places one or two letters correctly.
           That small success can feel reassuring, but it is often deceptively comforting because it does not meaningfully narrow the solution space.
           By contrast, a guess that fails completely can be far more informative because it provides a clean slate and forces you toward a different approach.
-          When none of the letters fit, the feedback sharply narrows the set of possibilities and clarifies how to proceed next.
         </p>
 
-        <blockquote class="pullquote">
-          Experimentation works only when actions are chosen with the intent to learn—not simply to be right on the first try.
+        <blockquote class="quote-callout red-accent" style="margin-top:16px;">
+          <div class="quote-text" style="margin-bottom:0;">
+            Experimentation works only when actions are chosen with the intent to learn—not simply to be right on the first try.
+          </div>
         </blockquote>
       </section>
 
-      <!-- IMAGE 3 -->
-      <div class="post-img">
-        <img src="../assets/img/funnel.png" alt="Experiment funnel illustration">
-        <div class="caption">Many pilots. Few prove value. Fewer scale — scaling requires governance and strong foundations.</div>
-      </div>
-
-      <section class="post-section">
+      <section class="post-section clearfix">
         <h2>Why Firms Often Mislearn</h2>
+
+        <!-- A3: abstract wave = signal/noise, uncertainty -->
+        <figure class="mag-img float-right">
+          <img src="../assets/img/A3.jpg" alt="Abstract wave pattern symbolizing noise and signal">
+          <figcaption>
+            Under uncertainty, outcomes blend signal and noise.
+            <span>Photo: Unsplash</span>
+          </figcaption>
+        </figure>
 
         <p>
           Many organizations treat experiments as a way to confirm what they already hope is true, rather than as a way to learn what they do not yet know.
@@ -266,7 +342,7 @@
         </p>
       </section>
 
-      <section class="post-section">
+      <section class="post-section clearfix">
         <h2>Noisy Experimentation: Why the Strategy Must Change</h2>
 
         <p>
@@ -289,19 +365,36 @@
           When people know they are being evaluated, they optimize for winning the evaluation, not for producing the best underlying outcome.
         </p>
 
+        <!-- A4: chess pawn = incentives, gaming evaluation -->
+        <figure class="mag-img float-left">
+          <img src="../assets/img/A4.jpg" alt="Chess pawn representing strategy and incentives">
+          <figcaption>
+            Evaluation changes behavior: people optimize for the scorecard.
+            <span>Photo: Unsplash</span>
+          </figcaption>
+        </figure>
+
         <p>
-         The authors’ model and empirical analysis of data science contests illustrate this dynamic clearly. Many firms run contest-style competitions, releasing training data while reserving a private test set to rank submissions. Statistically, an intermediate train–test split seems ideal: enough training data to build strong models, and enough test data to reliably rank them. But incentives change the picture. When the firm’s evaluation is most reliable—when it can most accurately distinguish high-performing from low-performing submissions—contestants have the strongest incentive to submit higher-variance “lottery ticket” models: approaches that are worse on average but occasionally score extremely well. This is exactly what an empirical analysis of Kaggle contests over the past five years uncovers. The implication is unsettling: firms may accurately pick a winner, but from a pool of inaccurate submissions.
+          The authors’ model and empirical analysis of data science contests illustrate this dynamic clearly. Many firms run contest-style competitions,
+          releasing training data while reserving a private test set to rank submissions. Statistically, an intermediate train–test split seems ideal:
+          enough training data to build strong models, and enough test data to reliably rank them. But incentives change the picture. When the firm’s evaluation
+          is most reliable—when it can most accurately distinguish high-performing from low-performing submissions—contestants have the strongest incentive to submit
+          higher-variance “lottery ticket” models: approaches that are worse on average but occasionally score extremely well. This is exactly what an empirical analysis
+          of Kaggle contests over the past five years uncovers. The implication is unsettling: firms may accurately pick a winner, but from a pool of inaccurate submissions.
         </p>
       </section>
 
-      <!-- IMAGE 4 -->
-      <div class="post-img">
-        <img src="../assets/img/incentives.png" alt="Incentives in competitions illustration">
-        <div class="caption">Incentives can distort what experiments reveal — and firms may select the “best” from a biased set.</div>
-      </div>
-
-      <section class="post-section">
+      <section class="post-section clearfix">
         <h2>Experimentation in the Age of AI</h2>
+
+        <!-- A5: track lanes = pilots -> scaling, performance pressure -->
+        <figure class="mag-img float-right">
+          <img src="../assets/img/A5.jpg" alt="Track lanes representing competition and scaling">
+          <figcaption>
+            The winners won’t test more—they’ll test smarter.
+            <span>Photo: Unsplash</span>
+          </figcaption>
+        </figure>
 
         <p>
           The business landscape has accelerated. Consumer needs shift faster. Competitive cycles are shorter. AI has rewritten the rules of product development—through
@@ -315,11 +408,11 @@
         </p>
       </section>
 
-      <footer class="refs">
+      <footer class="refs clearfix">
         <h3>Sources &amp; References</h3>
         <ul>
           <li>
-            <a href="https://www.wsj.com/ARTICLE-LINK-HERE" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.wsj.com/articles/companies-had-fun-experimenting-with-ai-now-they-have-to-show-the-returns-2a683592" target="_blank" rel="noopener noreferrer">
               Wall Street Journal — AI experimentation shifting toward ROI
             </a>
           </li>
@@ -352,5 +445,6 @@
 
     </article>
   </main>
+
 </body>
 </html>
