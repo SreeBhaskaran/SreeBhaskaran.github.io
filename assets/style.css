@@ -984,6 +984,13 @@ a:hover{ text-decoration: underline; }
 @media (max-width: 800px){
   .cards-2{ grid-template-columns: 1fr; }
 }
+@media (max-width: 760px){
+  .quote-callout{
+    max-width: 100%;
+    margin: 16px 0;
+  }
+}
+
 @media (max-width: 600px){
   .section-head{
     flex-direction: column;
