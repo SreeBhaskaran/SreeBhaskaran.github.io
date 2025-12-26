@@ -1001,6 +1001,45 @@ a:hover{ text-decoration: underline; }
   }
 }
 
+/* --- Consistent top-right nav (Home / Blog) across site --- */
+.nav.nav-blog{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.nav.nav-blog .nav-right{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+
+.nav.nav-blog a{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;               /* forces same size */
+  color: var(--text);
+  text-decoration:none;
+}
+
+.nav.nav-blog a:hover{
+  background: rgba(2,6,23,.05);
+}
+
+.nav-ico{
+  display:inline-flex;
+  width: 18px;                   /* forces same icon size */
+  height: 18px;
+}
+
+.nav-ico svg{
+  width: 18px;
+  height: 18px;
+}
+
 /* Mobile: stack panels */
 @media (max-width: 800px){
   .cards-2{ grid-template-columns: 1fr; }
