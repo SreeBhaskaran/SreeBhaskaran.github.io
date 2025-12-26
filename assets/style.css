@@ -971,6 +971,27 @@ a:hover{ text-decoration: underline; }
   text-align: right;
 }
 
+/* Blog list: make date + tags smaller + lighter */
+.post-meta{
+  font-size: 12.5px;          /* smaller than body */
+  color: rgba(71, 85, 105, .85);  /* slightly lighter muted */
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* tags on blog list */
+.post-meta .tag{
+  font-size: 11.5px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(53,76,161,.06);
+  color: rgba(15,23,42,.80);
+}
+
 /* Mobile: date drops below title cleanly */
 @media (max-width: 600px){
   .post-top{
