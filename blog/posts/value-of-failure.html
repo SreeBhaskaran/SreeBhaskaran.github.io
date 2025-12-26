@@ -49,29 +49,53 @@
       line-height: 1.4;
     }
 
-    /* --- Quote callouts --- */
-    .quote-callout{
-      border: 1px solid var(--border);
-      border-left: 5px solid var(--smu-blue);
-      background: rgba(15,23,42,.03);
-      border-radius: 14px;
-      padding: 14px 16px;
-      margin: 18px 0;
-    }
-    .quote-callout.red-accent{
-      border-left-color: var(--smu-red);
-      background: rgba(204,0,53,.05);
-    }
-    .quote-text{
-      font-size: 16px;
-      line-height: 1.55;
-      margin-bottom: 10px;
-    }
-    .quote-source{
-      font-size: 13px;
-      color: var(--muted);
-      text-align: right;
-    }
+    /* --- Quote callouts (pull quote style) --- */
+.quote-callout{
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--smu-blue);
+  background: rgba(15,23,42,.02);
+  border-radius: 14px;
+  padding: 14px 16px;
+
+  /* key changes */
+  max-width: 720px;       /* not full width */
+  margin: 18px auto;      /* center it */
+}
+
+.quote-callout.red-accent{
+  border-left-color: var(--smu-red);
+  background: rgba(204,0,53,.04);
+}
+
+  .quote-text{
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 10px;
+
+  /* key change */
+  color: rgba(15, 23, 42, .80);   /* slightly lighter than body text */
+}
+
+.quote-source{
+  font-size: 13px;
+  color: rgba(71, 85, 105, .85);  /* lighter muted */
+  text-align: right;
+}
+.quote-text{
+  font-style: italic;
+  position: relative;
+  padding-left: 18px;
+}
+
+.quote-text::before{
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-size: 26px;
+  line-height: 1;
+  color: rgba(53,76,161,.35);
+}
 
     /* --- Magazine inline images --- */
     figure.mag-img{
