@@ -60,6 +60,40 @@ a:hover{ text-decoration: underline; }
   justify-content:flex-end;
   align-items:center;
 }
+/* Align Home/Blog nav to the right on blog page */
+.nav.nav-blog{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav.nav-blog .nav-right{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* optional: match pill hover style */
+.nav.nav-blog a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.nav.nav-blog a:hover{
+  background: rgba(2,6,23,.05);
+}
+
+.nav.nav-blog a[aria-current="page"]{
+  font-weight: 700;
+  border: 1px solid var(--border);
+  background: rgba(53,76,161,.06);
+}
 
 .nav.nav-blog .nav-right{
   display:flex;
