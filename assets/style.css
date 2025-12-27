@@ -1142,3 +1142,11 @@ a:hover{ text-decoration: underline; }
   }
 }
 
+/* Remove any active/current-page highlight in top-right nav */
+.nav.nav-blog a[aria-current="page"]{
+  font-weight: inherit !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--text) !important;
+}
