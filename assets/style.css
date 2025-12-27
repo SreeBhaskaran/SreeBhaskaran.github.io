@@ -54,6 +54,52 @@ a:hover{ text-decoration: underline; }
   font-weight: 700;
   border-bottom: 2px solid var(--smu-blue);
 }
+/* === Top-right nav (Home / Blog) — consistent across all pages === */
+.nav.nav-blog{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.nav.nav-blog .nav-right{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap: 12px;
+}
+
+.nav.nav-blog a{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration:none;
+}
+
+.nav.nav-blog a:hover{
+  background: rgba(2,6,23,.05);
+}
+
+.nav.nav-blog a[aria-current="page"]{
+  font-weight: 700;
+  border: 1px solid var(--border);
+  background: rgba(53,76,161,.06);
+}
+
+/* icon sizing */
+.nav-ico{
+  display:inline-flex;
+  width: 18px;
+  height: 18px;
+}
+
+.nav-ico svg{
+  width: 18px;
+  height: 18px;
+}
 
 .hero{
   display:grid;
