@@ -1150,3 +1150,20 @@ a:hover{ text-decoration: underline; }
   box-shadow: none !important;
   color: var(--text) !important;
 }
+
+/* --- Default: remove any active/current styling everywhere --- */
+.nav.nav-blog a[aria-current="page"]{
+  font-weight: inherit !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--text) !important;
+}
+
+/* --- Blog page only: underline the active "Blog" link --- */
+.page-blog .nav.nav-blog a[aria-current="page"]{
+  font-weight: 600 !important;
+  box-shadow: inset 0 -2px 0 var(--smu-blue) !important;
+  border-radius: 0 !important;
+}
+
