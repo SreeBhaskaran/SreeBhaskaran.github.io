@@ -1321,5 +1321,95 @@ a:hover{ text-decoration: underline; }
     font-size: 13px;
   }
 }
+/* === Cost-to-deliver stack graphic === */
+
+.cost-stack{
+  margin: 34px 0;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(15,23,42,0.02);
+}
+
+.stack-title{
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.stack-sub{
+  margin: 0 0 14px;
+}
+
+.stack-bar{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* Each layer */
+.stack-layer{
+  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+.stack-layer:last-child{
+  border-bottom: 0;
+}
+
+.stack-label{
+  font-weight: 600;
+}
+
+.stack-note{
+  font-size: 12.5px;
+  color: rgba(15,23,42,0.65);
+}
+
+/* Color palette (SMU-inspired, soft editorial) */
+.l-prod{ background: rgba(53,76,161,0.16); }       /* blue */
+.l-inbound{ background: rgba(53,76,161,0.10); }
+.l-transport{ background: rgba(204,0,53,0.10); }   /* red */
+.l-warehousing{ background: rgba(15,23,42,0.06); } /* neutral */
+.l-inventory{ background: rgba(204,0,53,0.08); }
+.l-channel{ background: rgba(53,76,161,0.11); }
+.l-returns{ background: rgba(15,23,42,0.05); }
+
+/* Legend */
+.stack-legend{
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.legend-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.swatch{
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  display: inline-block;
+}
+
+/* Small screens */
+@media (max-width: 700px){
+  .stack-layer{
+    grid-template-columns: 1fr;
+  }
+  .stack-note{
+    opacity: 0.9;
+  }
+}
 
 
