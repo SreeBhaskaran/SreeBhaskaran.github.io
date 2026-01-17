@@ -1411,5 +1411,12 @@ a:hover{ text-decoration: underline; }
     opacity: 0.9;
   }
 }
+.cost-stack{
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.cost-stack:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(2,6,23,0.10);
+}
 
 
