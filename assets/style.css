@@ -1247,3 +1247,26 @@ a:hover{ text-decoration: underline; }
     margin: 20px 0;
   }
 }
+.capital-evidence{
+  background: rgba(53,76,161,0.05);
+  border-left: 4px solid var(--smu-blue);
+  padding: 18px 22px;
+  border-radius: 10px;
+  margin: 28px 0;
+}
+
+.capital-evidence h4{
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.capital-evidence ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.capital-evidence li{
+  margin-bottom: 8px;
+}
+
