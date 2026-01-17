@@ -1185,3 +1185,25 @@ a:hover{ text-decoration: underline; }
   display: block;
   border-radius: 12px;
 }
+/* Highlighted subsection for capital / evidence */
+.capital-callout{
+  margin: 36px 0;
+  padding: 22px 26px;
+  border-left: 4px solid var(--smu-blue);
+  background: rgba(53, 76, 161, 0.05);
+  border-radius: 10px;
+}
+
+.capital-callout h3{
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.capital-callout p{
+  margin: 0 0 10px;
+}
+
+.capital-callout p:last-child{
+  margin-bottom: 0;
+}
