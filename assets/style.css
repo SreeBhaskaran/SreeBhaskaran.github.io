@@ -1270,3 +1270,56 @@ a:hover{ text-decoration: underline; }
   margin-bottom: 8px;
 }
 
+/* === Blog table styling (editorial) === */
+
+.table-wrap{
+  overflow-x: auto;
+  margin: 28px 0;
+}
+
+.blog-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.blog-table caption{
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.blog-table caption span{
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-top: 4px;
+}
+
+.blog-table th,
+.blog-table td{
+  padding: 12px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-table th{
+  font-weight: 600;
+  text-align: left;
+  background: rgba(15,23,42,0.03);
+}
+
+.blog-table tbody tr:hover{
+  background: rgba(53,76,161,0.03);
+}
+
+/* Mobile tweaks */
+@media (max-width: 700px){
+  .blog-table{
+    font-size: 13px;
+  }
+}
+
+
