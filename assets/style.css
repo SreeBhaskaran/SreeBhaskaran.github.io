@@ -1498,3 +1498,26 @@ a:hover{ text-decoration: underline; }
   border-radius: 8px;
 }
 
+/* ===== Selected Publications alignment ===== */
+
+.pub-card{
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-card h4{
+  min-height: 58px;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.pub-authors{
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.pub-meta{
+  margin-top: auto;
+}
